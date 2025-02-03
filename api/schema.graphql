@@ -1,0 +1,19 @@
+
+# schema.graphql
+type Salary {
+    grossSalary: Float!
+    netSalary: Float!
+    AnualGrossSalary: Float!
+    AnualNetSalary: Float!
+    taxes: [Tax!]!
+}
+
+type Tax {
+    amount:  Float!
+	type    string
+	taxRate: Float!
+}
+
+type Query {
+    calculateTax: Salary
+}
